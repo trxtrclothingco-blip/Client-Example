@@ -1,198 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John's Plumbing Services</title>
-    <style>
-        /* Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Business Name</title>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+<style>
+:root{
+  --bg:#ffffff;
+  --glass:rgba(255,255,255,0.85);
+  --glass-border:rgba(0,0,0,0.1);
+  --accent:#4f46e5; /* vibrant tech accent */
+  --text:#111827;
+  --muted:#4b5563;
+}
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
+/* ===== RESET ===== */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+}
 
-        /* Header */
-        header {
-            background-color: #0074D9;
-            color: #fff;
-            padding: 20px 0;
-        }
+body{
+  min-height:100vh;
+  background:var(--bg);
+  color:var(--text);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:30px;
+  position:relative;
+  overflow-x:hidden;
+}
 
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+/* ===== ABSTRACT SHAPES ===== */
+.shape{
+  position:absolute;
+  border-radius:50%;
+  opacity:0.12;
+  filter: blur(40px);
+  z-index:0;
+  pointer-events:none;
+}
 
-        header h1 {
-            font-size: 1.8rem;
-            letter-spacing: 1px;
-        }
+.shape1{
+  width:300px;
+  height:300px;
+  background:radial-gradient(circle, #4f46e5, #6366f1);
+  top:10%;
+  left:5%;
+}
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
+.shape2{
+  width:200px;
+  height:200px;
+  background:radial-gradient(circle, #f472b6, #fbbf24);
+  top:60%;
+  right:10%;
+}
 
-        nav a:hover {
-            color: #ffd700;
-        }
+.shape3{
+  width:250px;
+  height:250px;
+  background:radial-gradient(circle, #22c55e, #14b8a6);
+  top:40%;
+  left:50%;
+}
 
-        /* Hero Section */
-        .hero {
-            background-color: #0056b3;
-            color: #fff;
-            text-align: center;
-            padding: 80px 20px;
-        }
+/* ===== MAIN WRAPPER ===== */
+.wrapper{
+  display:grid;
+  grid-template-rows:repeat(3, 1fr);
+  gap:30px;
+  width:100%;
+  max-width:1100px;
+  position:relative;
+  z-index:1;
+}
 
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
+/* ===== GLASS SECTION ===== */
+.section{
+  background:var(--glass);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border:1px solid var(--glass-border);
+  border-radius:28px;
+  padding:60px 40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  box-shadow:0 8px 24px rgba(0,0,0,0.08);
+  position:relative;
+}
 
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 25px;
-        }
+/* ===== HERO ===== */
+.hero h1{
+  font-size:3rem;
+  font-weight:800;
+  letter-spacing:-0.02em;
+}
 
-        .btn-contact {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #ffd700;
-            color: #0074D9;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 30px;
-            transition: background-color 0.3s;
-        }
+.hero span{
+  color:var(--accent);
+}
 
-        .btn-contact:hover {
-            background-color: #e6c200;
-        }
+.hero p{
+  margin-top:15px;
+  font-size:1.2rem;
+  color:var(--muted);
+  max-width:600px;
+}
 
-        /* Services Section */
-        .services {
-            padding: 60px 0;
-            text-align: center;
-        }
+.cta{
+  margin-top:30px;
+  display:inline-block;
+  padding:15px 40px;
+  background:var(--accent);
+  color:#ffffff;
+  text-decoration:none;
+  font-weight:700;
+  border-radius:999px;
+  box-shadow:0 10px 30px rgba(79,70,229,0.35);
+  transition:transform 0.2s;
+}
 
-        .services h3 {
-            font-size: 2rem;
-            margin-bottom: 40px;
-        }
+.cta:hover{
+  transform:scale(1.05);
+}
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
+/* ===== FEATURES ===== */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  justify-items:center;
+  position:relative;
+  z-index:1;
+}
 
-        .service-card {
-            background-color: #fff;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
+.card{
+  background:rgba(79,70,229,0.05);
+  border:1px solid var(--glass-border);
+  backdrop-filter:blur(12px);
+  border-radius:22px;
+  padding:28px;
+  width:100%;
+  max-width:280px;
+  text-align:center;
+}
 
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
+.card h3{
+  margin-bottom:10px;
+  color:var(--accent);
+}
 
-        .service-card h4 {
-            margin-bottom: 15px;
-            color: #0074D9;
-        }
+.card p{
+  color:var(--muted);
+  line-height:1.6;
+}
 
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 0.9rem;
-        }
+/* ===== CONTACT ===== */
+.contact h2{
+  font-size:2.3rem;
+  letter-spacing:-0.02em;
+}
 
-        /* Responsive */
-        @media (max-width: 600px) {
-            header, .header-container {
-                flex-direction: column;
-                text-align: center;
-            }
+.contact p{
+  margin:15px 0 30px;
+  color:var(--muted);
+}
 
-            nav a {
-                margin: 10px 5px;
-            }
+footer{
+  margin-top:25px;
+  text-align:center;
+  font-size:0.9rem;
+  color:var(--muted);
+}
 
-            .hero h2 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  .hero h1{font-size:2.2rem}
+  .section{padding:40px 25px}
+}
+</style>
 </head>
+
 <body>
-    <header>
-        <div class="container header-container">
-            <h1>John's Plumbing</h1>
-            <nav>
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="showcase.html" class="nav-link">Showcase</a>
-            </nav>
-        </div>
-    </header>
 
-    <section class="hero">
-        <div class="container hero-content">
-            <h2>Reliable Plumbing Solutions</h2>
-            <p>Fast, professional, and affordable plumbing services for your home or business.</p>
-            <a href="tel:07123456789" class="btn-contact">Call Now: 07123 456789</a>
-        </div>
-    </section>
+<!-- ABSTRACT SHAPES -->
+<div class="shape shape1"></div>
+<div class="shape shape2"></div>
+<div class="shape shape3"></div>
 
-    <section class="services container">
-        <h3>Our Services</h3>
-        <div class="services-grid">
-            <div class="service-card">
-                <h4>Tap & Pipe Repairs</h4>
-                <p>Quick and efficient repair for all kinds of taps and pipes.</p>
-            </div>
-            <div class="service-card">
-                <h4>Drain Cleaning</h4>
-                <p>Keep your drains flowing smoothly with professional cleaning.</p>
-            </div>
-            <div class="service-card">
-                <h4>Boiler Installation & Repair</h4>
-                <p>Expert installation and maintenance for all boiler types.</p>
-            </div>
-            <div class="service-card">
-                <h4>Emergency Plumbing</h4>
-                <p>Available 24/7 for urgent plumbing issues.</p>
-            </div>
-        </div>
-    </section>
+<div class="wrapper">
 
+  <!-- SECTION 1 -->
+  <section class="section hero">
+    <h1>Premium <span>Local Services</span></h1>
+    <p>High-trust, fast-response services built for modern customers who expect professionalism.</p>
+    <a class="cta" href="tel:07000000000">Call Now</a>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="section">
+    <div class="cards">
+      <div class="card">
+        <h3>Same-Day Service</h3>
+        <p>Rapid response times with consistent, high-quality results.</p>
+      </div>
+      <div class="card">
+        <h3>Fully Insured</h3>
+        <p>Professionally qualified and fully covered for peace of mind.</p>
+      </div>
+      <div class="card">
+        <h3>Transparent Pricing</h3>
+        <p>Clear costs, no hidden extras, no surprises.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="section contact">
+    <h2>Need Help Today?</h2>
+    <p>Speak directly with a professional and get a fast, reliable solution.</p>
+    <a class="cta" href="tel:07000000000">07000 000000</a>
     <footer>
-        <div class="container">
-            <p>&copy; 2025 John's Plumbing | Call: 07123 456789</p>
-        </div>
+      © 2025 Local Business Name · Website by Peter James Labs
     </footer>
+  </section>
+
+</div>
+
 </body>
 </html>
