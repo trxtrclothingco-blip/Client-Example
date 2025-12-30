@@ -10,7 +10,7 @@
   --bg:#ffffff;
   --glass:rgba(255,255,255,0.85);
   --glass-border:rgba(0,0,0,0.1);
-  --accent:#4f46e5; /* vibrant tech accent */
+  --accent:#4f46e5;
   --text:#111827;
   --muted:#4b5563;
 }
@@ -69,29 +69,42 @@ body{
   left:50%;
 }
 
-/* ===== NAVBAR ===== */
+/* ===== NAVBAR SECTION ===== */
+.nav-section {
+  background: var(--glass);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--glass-border);
+  border-radius: 28px;
+  padding: 20px 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  position: relative;
+  z-index: 2;
+}
+
 .navbar {
-  width:100%;
-  display:flex;
-  justify-content:center; /* centers navbar links horizontally */
-  gap:50px;
-  margin-bottom:30px;
-  z-index:2;
-  position:relative;
-  flex-wrap:wrap;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
 }
 
-.navbar a{
-  text-decoration:none;
-  color:var(--text);
-  font-weight:600;
-  font-size:1rem;
-  transition:color 0.3s, transform 0.2s;
+.navbar a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.2s;
 }
 
-.navbar a:hover{
-  color:var(--accent);
-  transform:scale(1.05);
+.navbar a:hover {
+  color: var(--accent);
+  transform: scale(1.05);
 }
 
 /* ===== MAIN WRAPPER ===== */
@@ -210,6 +223,7 @@ footer{
 @media(max-width:768px){
   .hero h1{font-size:2.2rem}
   .section{padding:40px 25px}
+  .nav-section { padding: 15px 20px; }
   .navbar { gap:25px; }
   .navbar a { font-size:0.95rem; }
 }
@@ -228,10 +242,12 @@ footer{
 <div class="shape shape2"></div>
 <div class="shape shape3"></div>
 
-<!-- NAVBAR -->
-<div class="navbar">
-  <a href="index.html">Home</a>
-  <a href="showcase.html">Showcase</a>
+<!-- NAVBAR SECTION -->
+<div class="nav-section">
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="showcase.html">Showcase</a>
+  </div>
 </div>
 
 <div class="wrapper">
