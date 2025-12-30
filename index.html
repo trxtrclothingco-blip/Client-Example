@@ -69,44 +69,6 @@ body{
   left:50%;
 }
 
-/* ===== NAVBAR SECTION ===== */
-.nav-section {
-  background: var(--glass);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid var(--glass-border);
-  border-radius: 28px;
-  padding: 20px 40px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1100px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  position: relative;
-  z-index: 2;
-}
-
-.navbar {
-  display: flex;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s, transform 0.2s;
-}
-
-.navbar a:hover {
-  color: var(--accent);
-  transform: scale(1.05);
-}
-
 /* ===== MAIN WRAPPER ===== */
 .wrapper{
   display:grid;
@@ -128,7 +90,7 @@ body{
   padding:60px 40px;
   display:flex;
   flex-direction:column;
-  justify-content:center;
+  justify-content:flex-start; /* changed for hero to align nav at top */
   align-items:center;
   text-align:center;
   box-shadow:0 8px 24px rgba(0,0,0,0.08);
@@ -136,6 +98,32 @@ body{
 }
 
 /* ===== HERO ===== */
+.hero{
+  position:relative;
+}
+
+.navbar {
+  display:flex;
+  justify-content:center;
+  gap:50px;
+  width:100%;
+  margin-bottom:30px;
+  flex-wrap:wrap;
+}
+
+.navbar a{
+  text-decoration:none;
+  color:var(--text);
+  font-weight:600;
+  font-size:1rem;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.navbar a:hover{
+  color:var(--accent);
+  transform:scale(1.05);
+}
+
 .hero h1{
   font-size:3rem;
   font-weight:800;
@@ -223,8 +211,7 @@ footer{
 @media(max-width:768px){
   .hero h1{font-size:2.2rem}
   .section{padding:40px 25px}
-  .nav-section { padding: 15px 20px; }
-  .navbar { gap:25px; }
+  .navbar { gap:25px; margin-bottom:20px; }
   .navbar a { font-size:0.95rem; }
 }
 
@@ -242,24 +229,22 @@ footer{
 <div class="shape shape2"></div>
 <div class="shape shape3"></div>
 
-<!-- NAVBAR SECTION -->
-<div class="nav-section">
-  <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="showcase.html">Showcase</a>
-  </div>
-</div>
-
 <div class="wrapper">
 
-  <!-- SECTION 1 -->
+  <!-- SECTION 1: HERO -->
   <section class="section hero">
+    <!-- NAVBAR inside top section -->
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="showcase.html">Showcase</a>
+    </div>
+
     <h1>Premium <span>Local Services</span></h1>
     <p>High-trust, fast-response services built for modern customers who expect professionalism.</p>
     <a class="cta" href="tel:07000000000">Call Now</a>
   </section>
 
-  <!-- SECTION 2 -->
+  <!-- SECTION 2: FEATURES -->
   <section class="section">
     <div class="cards">
       <div class="card">
@@ -277,7 +262,7 @@ footer{
     </div>
   </section>
 
-  <!-- SECTION 3 -->
+  <!-- SECTION 3: CONTACT -->
   <section class="section contact">
     <h2>Need Help Today?</h2>
     <p>Speak directly with a professional and get a fast, reliable solution.</p>
