@@ -1,222 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FutureFlow Plumbing - Professional Plumbing Services</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300,400,500,700&display=swap" rel="stylesheet">
-<style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Roboto', sans-serif; background: #f4f6fc; color: #333; line-height: 1.6; }
-
-    /* Header */
-    header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: rgba(255,255,255,0.95);
-        backdrop-filter: blur(10px);
-        padding: 15px 30px;
-        text-align: center;
-        box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-        z-index: 1000;
-        border-radius: 0 0 20px 20px;
-    }
-    header h1 {
-        font-family: 'Orbitron', sans-serif;
-        color: #2563eb;
-        font-size: 1.9rem;
-    }
-    nav { margin-top: 8px; }
-    nav a {
-        color: #4b5563;
-        text-decoration: none;
-        margin: 0 18px;
-        font-weight: 500;
-        font-size: 0.95rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: color 0.3s;
-    }
-    nav a:hover { color: #2563eb; }
-
-    /* Hero */
-    .hero {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 200px 20px 150px;
-        background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
-                    url('https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg') no-repeat center/cover;
-    }
-    .hero h2 { font-family: 'Orbitron', sans-serif; font-size: 4rem; color: #1e40af; margin-bottom: 20px; }
-    .hero p { font-size: 1.5rem; max-width: 850px; margin-bottom: 35px; color: #1f2937; }
-    .btn { padding: 16px 50px; background: #2563eb; color: #fff; font-size: 1.2rem; border-radius: 50px; text-decoration: none; transition: transform 0.3s; display: inline-block; }
-    .btn:hover { transform: scale(1.05); }
-
-    /* Sections */
-    section {
-        max-width: 1300px;
-        margin: 70px auto;
-        padding: 100px 25px;
-        border-radius: 25px;
-        background: rgba(255,255,255,0.85);
-        box-shadow: 0 20px 50px rgba(0,0,0,0.06);
-        scroll-margin-top: 140px;
-    }
-    h3 {
-        font-family: 'Orbitron', sans-serif;
-        font-size: 2.5rem;
-        text-align: center;
-        margin-bottom: 60px;
-        color: #1e40af;
-    }
-
-    /* Grids */
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 35px; }
-    
-    /* Service Cards */
-    .card {
-        background: #2563eb; /* Blue background matching the header color */
-        color: #fff; /* White text for contrast */
-        border-radius: 20px;
-        padding: 35px;
-        text-align: center;
-        font-weight: 500;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .card:hover {
-        transform: translateY(-7px);
-        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    }
-
-    /* Testimonials override */
-    .testimonial-card {
-        background:#f3f4f6; 
-        color:#111; 
-        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-    }
-
-    /* Projects */
-    .project {
-        position: relative;
-        height: 280px;
-        border-radius: 20px;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: flex-end;
-        overflow: hidden;
-        transition: transform 0.3s;
-    }
-    .project:hover { transform: scale(1.03); }
-    .project span {
-        width: 100%;
-        padding: 18px;
-        background: rgba(0,0,0,0.6);
-        color: #fff;
-        text-align: center;
-        font-weight: 600;
-        font-size: 1.1rem;
-    }
-
-    #about, #contact { background: rgba(230,240,255,0.9); border-radius: 25px; text-align:center; }
-
-    /* Footer */
-    footer {
-        text-align: center;
-        padding: 60px 20px;
-        background: #1e293b;
-        color: #e2e8f0;
-        margin-top: 80px;
-        border-radius: 20px 20px 0 0;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-        .hero h2 { font-size: 3rem; }
-        .hero p { font-size: 1.2rem; }
-        .btn { font-size: 1rem; padding: 14px 40px; }
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAE Marketing - Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">JAE Marketing</div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services & Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-    <h1>FutureFlow Plumbing</h1>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="showcase.html">Showcase</a>
-    </nav>
-</header>
+    <section class="hero">
+        <img src="https://assets.justinmind.com/wp-content/uploads/2024/07/hero-image-examples-mars-explorer.png" alt="Digital Marketing Hero" class="hero-image">
+        <div class="hero-content">
+            <h1>Welcome to JAE Marketing</h1>
+            <p>We specialize in custom website building and marketing services to help businesses attract more clients.</p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/+31628472242" class="btn whatsapp">Message Us on WhatsApp</a>
+                <a href="tel:+31628472242" class="btn call">Call Us</a>
+            </div>
+        </div>
+    </section>
 
-<section id="home" class="hero">
-    <h2>Modern Plumbing Solutions</h2>
-    <p>Professional, reliable, and efficient plumbing services available 24/7.</p>
-    <a href="tel:+447912345678" class="btn">Call Now</a>
-</section>
-
-<section id="services">
-    <h3>Our Services</h3>
-    <div class="grid">
-        <div class="card">Leak Detection & Repairs</div>
-        <div class="card">Blocked Drains & Toilets</div>
-        <div class="card">Boiler & Heating Repairs</div>
-        <div class="card">Bathroom Installations</div>
-        <div class="card">Pipe Replacement</div>
-        <div class="card">24/7 Emergency Call-Outs</div>
-    </div>
-</section>
-
-<section id="testimonials">
-    <h3>What Our Clients Say</h3>
-    <div class="grid">
-        <div class="card testimonial-card">“Fast response and excellent workmanship.”<br><strong>– Sarah L</strong></div>
-        <div class="card testimonial-card">“Fixed our leak same day. Highly recommend.”<br><strong>– Mark T</strong></div>
-        <div class="card testimonial-card">“Professional, tidy, and fairly priced.”<br><strong>– James R</strong></div>
-    </div>
-</section>
-
-<section id="gallery">
-    <h3>Our Projects</h3>
-    <div class="grid">
-        <div class="project" style="background-image:url('IMG_0312.jpeg');"><span>Bathroom Installation</span></div>
-        <div class="project" style="background-image:url('IMG_0313.jpeg');"><span>Pipework Replacement</span></div>
-        <div class="project" style="background-image:url('IMG_0314.jpeg');"><span>Boiler & Heating Upgrade</span></div>
-        <div class="project" style="background-image:url('IMG_0315.jpeg');"><span>Modern Bathroom Refit</span></div>
-    </div>
-</section>
-
-<section id="about">
-    <h3>About FutureFlow Plumbing</h3>
-    <p>At <strong>FutureFlow Plumbing</strong>, we are committed to delivering top-quality plumbing services to homes and businesses. With over <strong>10 years of experience</strong> in the industry, our team of certified plumbers is equipped to handle everything from minor repairs to major installations.</p>
-    
-    <p>We specialize in:</p>
-    <ul style="max-width:700px; margin:20px auto 0; list-style: disc; padding-left:20px; font-size:1.1rem; color:#1f2937;">
-        <li>Leak detection and repairs</li>
-        <li>Blocked drains and toilets</li>
-        <li>Boiler servicing and heating system maintenance</li>
-        <li>Bathroom and kitchen installations</li>
-        <li>Pipework replacement and upgrades</li>
-        <li>24/7 emergency call-outs</li>
-    </ul>
-
-    <p style="margin-top:20px;">Our mission is to provide <strong>reliable, efficient, and affordable plumbing solutions</strong> while maintaining the highest standards of workmanship. We pride ourselves on transparent pricing, timely service, and a commitment to customer satisfaction.</p>
-
-    <p>When you choose FutureFlow Plumbing, you choose a team that values professionalism, safety, and lasting solutions for your property’s plumbing needs.</p>
-</section>
-
-<section id="contact">
-    <h3>Contact Us Today</h3>
-    <a href="tel:+447912345678" class="btn">Call Now</a>
-</section>
-
-<footer>
-    &copy; 2025 FutureFlow Plumbing. All rights reserved.
-</footer>
-
+    <footer>
+        <p>&copy; 2026 JAE Marketing. All rights reserved.</p>
+    </footer>
 </body>
 </html>
