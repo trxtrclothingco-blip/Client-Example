@@ -1,50 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JAE Marketing - Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Quick adjustment to add more gap from the top */
-        .hero-content {
-            margin-top: 10vh; /* Increases space from the navbar/top */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Peter James Labs offers affordable, fast, mobile-friendly, SEO-optimized websites for small businesses and startups.">
+  <meta name="keywords" content="website building, affordable websites, SEO optimized, mobile friendly, small business websites">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Peter James Labs – Home">
+  <meta property="og:description" content="Get your professional website live in 48 hours with no upfront costs.">
+  <meta property="og:image" content="IMG_0936.jpeg">
+  <title>Peter James Labs – Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpeg" href="IMG_0936.jpeg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Peter James Labs",
+    "url": "https://www.peterjameslabs.com",
+    "logo": "IMG_0936.jpeg",
+    "description": "Website building service for small businesses."
+  }
+  </script>
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">JAE Marketing</div>
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="burger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services & Pricing</a></li>
-            </ul>
-        </nav>
-    </header>
+<body data-theme="dark">
+  <nav class="sticky-nav">
+    <div class="logo">
+      <img src="IMG_0936.jpeg" alt="Peter James Labs Logo" loading="lazy">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="referral.html">Partners</a></li>
+    </ul>
+    <div class="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <label for="themeSwitch">Light Mode: <input type="checkbox" id="themeSwitch"></label>
+  </nav>
 
-    <section class="hero">
-        <img src="IMG_0920.jpeg" alt="JAE Marketing Hero Background" class="hero-image">
-        <div class="hero-content">
-            <h1>Welcome to JAE Marketing</h1>
-            <p>We specialize in custom marketing services to help businesses attract more clients.</p>
-            <div class="contact-buttons">
-                <a href="https://wa.me/+31628472242" class="btn whatsapp">Message Us on WhatsApp</a>
-                <a href="tel:+31628472242" class="btn call">Call Us</a>
-            </div>
-        </div>
+  <main class="content-wrapper">
+    <img src="IMG_0936.jpeg" class="header-img" alt="Hero Image of modern workspace" loading="lazy">
+    <section class="section">
+      <h2>Welcome to Peter James Labs</h2>
+      <p>Say goodbye to high upfront costs — get a fast, mobile-friendly, SEO-optimized website that’s fully managed. Get your website live in as little as 48 hours.</p>
+      <div class="button-wrapper">
+        <a href="tel:+447521482302" class="buy-btn btn-small" aria-label="Call us">📱 Call</a>
+        <a href="pricing.html" class="buy-btn btn-large">📦 Packages</a>
+        <a href="https://wa.me/447521482302" class="whatsapp-btn btn-small" aria-label="Message on WhatsApp">💬 Chat</a>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2026 JAE Marketing. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>Peter James Labs © 2026 — All Rights Reserved</p>
+    <div class="social-links">
+      <a href="https://twitter.com" aria-label="Twitter">Twitter</a>
+      <a href="https://linkedin.com" aria-label="LinkedIn">LinkedIn</a>
+      <a href="https://instagram.com" aria-label="Instagram">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
