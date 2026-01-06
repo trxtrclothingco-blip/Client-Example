@@ -7,6 +7,31 @@
   <title>Peter James Labs – Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/jpeg" href="IMG_0936.jpeg">
+  <style>
+    /* Optional: smaller card styling for first project */
+    .project.crepcode img {
+      width: 200px;         /* small width */
+      max-width: 100%;      /* responsive */
+      height: auto;         /* maintain aspect ratio */
+      display: block;
+      margin-bottom: 10px;  /* spacing below image */
+    }
+
+    .project.crepcode h3 {
+      font-size: 1.1rem;    /* smaller title */
+      margin-bottom: 5px;
+    }
+
+    .project.crepcode p {
+      font-size: 0.85rem;   /* smaller description */
+      margin-bottom: 10px;
+    }
+
+    .project.crepcode .buy-btn {
+      padding: 8px 15px;    /* smaller button */
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body data-theme="dark">
   <nav class="sticky-nav">
@@ -35,19 +60,23 @@
     <section class="section">
       <h2>Our Portfolio</h2>
       <div class="portfolio-grid">
-        <div class="project">
+        <!-- CrepCode Project -->
+        <div class="project crepcode">
           <img src="IMG_1272.jpeg" alt="Project 1: CrepCode" loading="lazy">
           <h3>CrepCode</h3>
           <p>Crep Code — the UK’s Number 1 trainer trader. Trusted by over 5,000 sneakerheads.</p>
           <a href="https://crepcode.com" class="buy-btn" target="_blank" rel="noopener noreferrer">View Live</a>
         </div>
+
+        <!-- Second Project -->
         <div class="project">
           <img src="IMG_0928.jpeg" alt="Project 2: Business Landing Page" loading="lazy">
           <h3>Business Landing Page</h3>
           <p>SEO-optimized page for service providers.</p>
           <a href="#" class="buy-btn">View Live</a>
         </div>
-        <!-- Add more projects -->
+
+        <!-- Add more projects here -->
       </div>
     </section>
   </main>
