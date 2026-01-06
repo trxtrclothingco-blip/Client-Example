@@ -17,7 +17,7 @@
       justify-content: center;
     }
 
-    /* Individual project cards (matching outer section style) */
+    /* Individual project cards */
     .project {
       background-color: rgba(0, 0, 0, 0.6);
       backdrop-filter: blur(5px);
@@ -25,39 +25,31 @@
       padding: 20px;
       width: 260px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Center alignment + sizing */
-    .project.crepcode,
-    .project.plumber {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
     }
 
-    .project.crepcode img,
-    .project.plumber img {
+    /* Image sizing — SAME for all cards */
+    .project img {
       width: 200px;
       max-width: 100%;
       height: auto;
       margin-bottom: 10px;
     }
 
-    .project.crepcode h3,
-    .project.plumber h3 {
+    .project h3 {
       font-size: 1.1rem;
       margin-bottom: 5px;
     }
 
-    .project.crepcode p,
-    .project.plumber p {
+    .project p {
       font-size: 0.85rem;
       margin-bottom: 12px;
     }
 
-    .project.crepcode .buy-btn,
-    .project.plumber .buy-btn {
+    .project .buy-btn {
       padding: 8px 15px;
       font-size: 0.9rem;
     }
@@ -113,7 +105,7 @@
 
       <div class="portfolio-grid">
         <!-- CrepCode -->
-        <div class="project crepcode">
+        <div class="project">
           <img src="IMG_1272.jpeg" alt="CrepCode Website" loading="lazy">
           <h3>CrepCode</h3>
           <p>Crep Code — the UK’s Number 1 trainer trader. Trusted by over 5,000 sneakerheads.</p>
@@ -121,11 +113,19 @@
         </div>
 
         <!-- Plumber Example -->
-        <div class="project plumber">
+        <div class="project">
           <img src="IMG_1279.jpeg" alt="Plumber Website Example" loading="lazy">
           <h3>Plumber Example</h3>
           <p>SEO-optimized page for service providers.</p>
           <a href="https://trxtrclothingco-blip.github.io/Plumber-Example-/" class="buy-btn" target="_blank" rel="noopener noreferrer">View Live</a>
+        </div>
+
+        <!-- Gas Engineer Example (NEW) -->
+        <div class="project">
+          <img src="IMG_1288.jpeg" alt="Gas Engineer Website Example" loading="lazy">
+          <h3>Gas Engineer Example</h3>
+          <p>Modern, conversion-focused website for gas & heating engineers.</p>
+          <a href="https://trxtrclothingco-blip.github.io/Example-Gas-Engineer/" class="buy-btn" target="_blank" rel="noopener noreferrer">View Live</a>
         </div>
       </div>
     </section>
